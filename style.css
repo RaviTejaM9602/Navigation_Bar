@@ -1,0 +1,37 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing:border-box;  
+}
+
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(148, 219, 148);
+ }
+
+ .logo{
+   color: white;
+   text-transform: uppercase;
+   letter-spacing: 5px;
+   font-size: 25px;
+}
+
+nav ul{
+  display:flex;
+  justify-content: space-around;
+  width:30%;
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+nav ul li{
+  list-style:none;
+  text-decoration: none;
+}
