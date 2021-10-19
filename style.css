@@ -11,7 +11,7 @@ nav{
   align-items: center;
   min-height: 8vh;
   font-family:Georgia, 'Times New Roman', Times, serif;
-  background-color: rgb(148, 219, 148);
+  background-color: rgb(147, 124, 177);
  }
 
  .logo{
@@ -36,13 +36,77 @@ nav ul li{
   text-decoration: none;
 }
 
+nav ul li a{
+  color: whitesmoke;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  
+}
+
 .burger{
-  display:block;
+  display:none;
+  cursor:pointer;
 }
 
 .burger div{
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: black;
   margin:5px;
 }
+
+
+@media screen and (max-width:768px){
+  body{
+    overflow: hidden;
+  }
+  nav ul{
+    position:absolute;
+    right:0px;
+    height:92vh;
+    top:8vh;
+    background-color: rgb(147, 124, 177);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li{
+    opacity: 0;
+  }
+
+  .burger{
+    display:block;
+  }
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
+
+
+@keyframes navlinkFade {
+  from{
+    opacity : 0;
+    transform : translateX(50px);
+  }
+  
+  to{
+    opacity : 1;
+    transform : translateX(0px);
+  }
+}
+
+  
+@media screen and (max-width:1024){
+  nav ul{
+    width:60%;
+  }  
+}
+
+
